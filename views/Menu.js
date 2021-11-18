@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, Fragment} from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native'
 
@@ -53,8 +53,9 @@ const Menu = () => {
     }
 
     return ( 
+        
          <Container style={globalStyles.contenedor}>
-            <Container style={{backgroundColor:'#FFF'}}>
+            <Container style={{backgroundColor:'#FFF'}}><ScrollView>
                 <List>
                     {menu.map((platillo, i) => {
                         //console.log(platillo)
@@ -89,7 +90,7 @@ const Menu = () => {
                             </Fragment>
                         )
                     })}
-                </List>
+                </List></ScrollView>
             </Container>
         </Container> 
     );
